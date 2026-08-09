@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TechMatch | Home</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="bg-[#FFFDF9] text-[#333333] font-sans flex flex-col min-h-screen">
+
+  <nav class="bg-[#FFFDF9] border-b border-gray-200 sticky top-0 z-50 px-6 py-4 shadow-sm">
+    <div class="max-w-7xl mx-auto flex justify-between items-center">
+      <div class="text-xl font-extrabold tracking-tight">TECH<span class="text-[#86CFFF]">MATCH</span></div>
+      
+      <div class="hidden lg:flex space-x-6 font-medium text-sm">
+        <a href="index.html" class="text-[#86CFFF] border-b-2 border-[#86CFFF] pb-1">Home</a>
+        <a href="pages/catalog.html" class="hover:text-[#86CFFF] transition-colors">Catalog</a>
+        <a href="pages/matchmaker.html" class="hover:text-[#86CFFF] transition-colors">Matchmaker</a>
+        <a href="pages/compare.html" class="hover:text-[#86CFFF] transition-colors">Compare</a>
+        <a href="pages/guides.html" class="hover:text-[#86CFFF] transition-colors">Guides</a>
+        <a href="pages/faq.html" class="hover:text-[#86CFFF] transition-colors">FAQ</a>
+        <a href="pages/reviews.html" class="hover:text-[#86CFFF] transition-colors">Reviews</a>
+        <a href="pages/about.html" class="hover:text-[#86CFFF] transition-colors">About Us</a>
+        <a href="pages/contact.html" class="hover:text-[#86CFFF] transition-colors">Contact</a>
+      </div>
+
+      <button id="mobileMenuBtn" class="lg:hidden text-[#333333] focus:outline-none hover:text-[#86CFFF] transition-colors">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+
+    <div id="mobileMenu" class="hidden mt-4 flex-col space-y-3 pb-4 font-medium border-t border-gray-100 pt-4 lg:hidden">
+      <a href="index.html" class="block text-[#86CFFF]">Home</a>
+      <a href="pages/catalog.html" class="block hover:text-[#86CFFF] transition-colors">Catalog</a>
+      <a href="pages/matchmaker.html" class="block hover:text-[#86CFFF] transition-colors">Matchmaker</a>
+      <a href="pages/compare.html" class="block hover:text-[#86CFFF] transition-colors">Compare</a>
+      <a href="pages/guides.html" class="block hover:text-[#86CFFF] transition-colors">Guides</a>
+      <a href="pages/faq.html" class="block hover:text-[#86CFFF] transition-colors">FAQ</a>
+      <a href="pages/reviews.html" class="block hover:text-[#86CFFF] transition-colors">Reviews</a>
+      <a href="pages/about.html" class="block hover:text-[#86CFFF] transition-colors">About Us</a>
+      <a href="pages/contact.html" class="block hover:text-[#86CFFF] transition-colors">Contact</a>
+    </div>
+  </nav>
+
+  <main class="flex-grow max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+    <div class="space-y-6">
+      <span class="bg-[#FFE888] text-[#333333] text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Precision Hardware Finder</span>
+      <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">Find Your Perfect Tech Loadout Without The Guesswork.</h1>
+      <p class="text-[#777777] text-lg">Input your workflow and budget to get an exact hardware match instantly.</p>
+      <div>
+        <a href="pages/matchmaker.html" class="bg-[#86CFFF] hover:bg-[#6ab4e8] text-white font-bold px-8 py-4 rounded-2xl shadow-md transition-all inline-block text-center">Start Matchmaker</a>
+      </div>
+    </div>
+    <div class="w-full h-80 md:h-96 bg-gray-50 rounded-3xl overflow-hidden border border-gray-200 shadow-sm relative group">
+      <img src="assets/images/red-and-black-asus-rog-gaming-laptop-logo-dshb4obv7c4it030.jpg" alt="ASUS ROG Gaming Hardware Graphic" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+    </div>
+  </main>
+
+  <footer class="bg-white border-t border-gray-200 py-8 text-center text-[#777777] text-sm mt-auto">
+    <p>&copy; 2026 TechMatch. All rights reserved.</p>
+  </footer>
+
+  <script src="assets/JS/script.js"></script>
+</body>
+</html>

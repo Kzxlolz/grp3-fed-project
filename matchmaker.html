@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TechMatch | Matchmaker</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body class="bg-[#FFFDF9] text-[#333333] font-sans flex flex-col min-h-screen">
+  <nav class="bg-[#FFFDF9] border-b border-gray-200 sticky top-0 z-50 px-6 py-4 shadow-sm">
+    <div class="max-w-7xl mx-auto flex justify-between items-center">
+      <div class="text-xl font-extrabold tracking-tight">TECH<span class="text-[#86CFFF]">MATCH</span></div>
+      <div class="hidden lg:flex space-x-6 font-medium text-sm">
+        <a href="../index.html" class="hover:text-[#86CFFF] transition-colors">Home</a>
+        <a href="catalog.html" class="hover:text-[#86CFFF] transition-colors">Catalog</a>
+        <a href="matchmaker.html" class="text-[#86CFFF] border-b-2 border-[#86CFFF] pb-1">Matchmaker</a>
+        <a href="compare.html" class="hover:text-[#86CFFF] transition-colors">Compare</a>
+        <a href="guides.html" class="hover:text-[#86CFFF] transition-colors">Guides</a>
+        <a href="faq.html" class="hover:text-[#86CFFF] transition-colors">FAQ</a>
+        <a href="reviews.html" class="hover:text-[#86CFFF] transition-colors">Reviews</a>
+        <a href="about.html" class="hover:text-[#86CFFF] transition-colors">About Us</a>
+        <a href="contact.html" class="hover:text-[#86CFFF] transition-colors">Contact</a>
+      </div>
+      <button id="mobileMenuBtn" class="lg:hidden text-[#333333] focus:outline-none hover:text-[#86CFFF]">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+      </button>
+    </div>
+    <div id="mobileMenu" class="hidden mt-4 flex-col space-y-3 pb-4 font-medium border-t border-gray-100 pt-4 lg:hidden">
+      <a href="../index.html" class="block hover:text-[#86CFFF] transition-colors">Home</a>
+      <a href="catalog.html" class="block hover:text-[#86CFFF] transition-colors">Catalog</a>
+      <a href="matchmaker.html" class="block text-[#86CFFF]">Matchmaker</a>
+      <a href="compare.html" class="block hover:text-[#86CFFF] transition-colors">Compare</a>
+      <a href="guides.html" class="block hover:text-[#86CFFF] transition-colors">Guides</a>
+      <a href="faq.html" class="block hover:text-[#86CFFF] transition-colors">FAQ</a>
+      <a href="reviews.html" class="block hover:text-[#86CFFF] transition-colors">Reviews</a>
+      <a href="about.html" class="block hover:text-[#86CFFF] transition-colors">About Us</a>
+      <a href="contact.html" class="block hover:text-[#86CFFF] transition-colors">Contact</a>
+    </div>
+  </nav>
+
+  <main class="flex-grow max-w-5xl mx-auto px-6 py-12 w-full">
+    <div class="bg-white p-8 rounded-3xl border border-gray-200 shadow-sm mb-12">
+      <h1 class="text-3xl font-extrabold mb-4">Hardware Configuration Engine</h1>
+      <p class="text-[#777777] mb-6">Select your criteria below to filter optimal setups.</p>
+      
+      <form id="matchForm" class="space-y-6">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div>
+             <label class="block text-sm font-semibold text-[#777777] mb-2">Budget (S$)</label>
+             <input type="number" id="budgetInput" placeholder="e.g., 1500" class="w-full bg-[#FFFDF9] border border-gray-200 rounded-xl px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#86CFFF]">
+          </div>
+          <div>
+             <label class="block text-sm font-semibold text-[#777777] mb-2">Primary Use Case</label>
+             <select id="useCase" class="w-full bg-[#FFFDF9] border border-gray-200 rounded-xl px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#86CFFF]">
+                <option value="cs">Programming / CS</option>
+                <option value="gaming">Heavy Gaming</option>
+                <option value="casual">Casual / Office</option>
+             </select>
+          </div>
+        </div>
+        <button type="submit" class="w-full bg-[#86CFFF] hover:bg-[#6bbcf5] text-white font-bold px-4 py-3 rounded-xl transition-colors">Find Matches</button>
+      </form>
+    </div>
+    <div id="resultContainer" class="space-y-4"></div>
+  </main>
+
+  <footer class="bg-white border-t border-gray-200 py-8 text-center text-[#777777] text-sm mt-auto">
+    <p>&copy; 2026 TechMatch. All rights reserved.</p>
+  </footer>
+  <script src="../assets/JS/script.js"></script>
+</body>
+</html>

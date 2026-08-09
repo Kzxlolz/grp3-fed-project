@@ -1,0 +1,50 @@
+/* 
+  Custom Stylesheet for TechMatch 
+  ---------------------------------------------------------
+  Note: Core layout and colors are handled by Tailwind classes.
+  File for base overrides, web fonts, or complex animations.
+*/
+
+/* 1. Import a modern font (Optional: Inter from Google Fonts) */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+body {
+  font-family: 'Inter', sans-serif;
+  /* Smooth scrolling for anchor links */
+  scroll-behavior: smooth; 
+}
+
+/* 2. Custom Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FFFDF9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #e5e7eb;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #86CFFF;
+}
+
+/* 3. Custom Utility Classes */
+/* Add this class to HTML elements you want to animate smoothly */
+.fade-in {
+  animation: fadeIn 0.4s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from { 
+    opacity: 0; 
+    transform: translateY(-10px); 
+  }
+  to { 
+    opacity: 1; 
+    transform: translateY(0); 
+  }
+}

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TechMatch | Catalog</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body class="bg-[#FFFDF9] text-[#333333] font-sans flex flex-col min-h-screen">
+  
+  <nav class="bg-[#FFFDF9] border-b border-gray-200 sticky top-0 z-50 px-6 py-4 shadow-sm">
+    <div class="max-w-7xl mx-auto flex justify-between items-center">
+      <div class="text-xl font-extrabold tracking-tight">TECH<span class="text-[#86CFFF]">MATCH</span></div>
+      
+      <div class="hidden lg:flex space-x-6 font-medium text-sm">
+        <a href="../index.html" class="hover:text-[#86CFFF] transition-colors">Home</a>
+        <a href="catalog.html" class="text-[#86CFFF] border-b-2 border-[#86CFFF] pb-1">Catalog</a>
+        <a href="matchmaker.html" class="hover:text-[#86CFFF] transition-colors">Matchmaker</a>
+        <a href="compare.html" class="hover:text-[#86CFFF] transition-colors">Compare</a>
+        <a href="guides.html" class="hover:text-[#86CFFF] transition-colors">Guides</a>
+        <a href="faq.html" class="hover:text-[#86CFFF] transition-colors">FAQ</a>
+        <a href="reviews.html" class="hover:text-[#86CFFF] transition-colors">Reviews</a>
+        <a href="about.html" class="hover:text-[#86CFFF] transition-colors">About Us</a>
+        <a href="contact.html" class="hover:text-[#86CFFF] transition-colors">Contact</a>
+      </div>
+
+      <button id="mobileMenuBtn" class="lg:hidden text-[#333333] focus:outline-none hover:text-[#86CFFF] transition-colors">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+
+    <div id="mobileMenu" class="hidden mt-4 flex-col space-y-3 pb-4 font-medium border-t border-gray-100 pt-4 lg:hidden">
+      <a href="../index.html" class="block hover:text-[#86CFFF] transition-colors">Home</a>
+      <a href="catalog.html" class="block text-[#86CFFF]">Catalog</a>
+      <a href="matchmaker.html" class="block hover:text-[#86CFFF] transition-colors">Matchmaker</a>
+      <a href="compare.html" class="block hover:text-[#86CFFF] transition-colors">Compare</a>
+      <a href="guides.html" class="block hover:text-[#86CFFF] transition-colors">Guides</a>
+      <a href="faq.html" class="block hover:text-[#86CFFF] transition-colors">FAQ</a>
+      <a href="reviews.html" class="block hover:text-[#86CFFF] transition-colors">Reviews</a>
+      <a href="about.html" class="block hover:text-[#86CFFF] transition-colors">About Us</a>
+      <a href="contact.html" class="block hover:text-[#86CFFF] transition-colors">Contact</a>
+    </div>
+  </nav>
+
+  <main class="flex-grow max-w-7xl mx-auto px-6 py-12 w-full space-y-8">
+    <div>
+      <h1 class="text-4xl font-extrabold mb-2 text-center">Hardware Catalog</h1>
+      <p class="text-[#777777] text-center">Browse all available laptop configurations and filter by your exact specifications.</p>
+    </div>
+
+    <!-- Filter Control Panel -->
+    <div class="bg-white p-6 rounded-3xl border border-gray-200 shadow-sm grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-4 items-end">
+      <div>
+        <label class="block text-xs font-semibold text-[#777777] mb-1">Brand</label>
+        <select id="filterBrand" class="w-full bg-[#FFFDF9] border border-gray-200 rounded-xl px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#86CFFF]">
+          <option value="all">All Brands</option>
+          <option value="Lenovo">Lenovo</option>
+          <option value="Asus">Asus</option>
+          <option value="Dell">Dell</option>
+          <option value="HP">HP</option>
+          <option value="Acer">Acer</option>
+          <option value="MSI">MSI</option>
+          <option value="Razer">Razer</option>
+          <option value="Custom">Custom</option>
+        </select>
+      </div>
+
+      <div>
+        <label class="block text-xs font-semibold text-[#777777] mb-1">Use Case</label>
+        <select id="filterUseCase" class="w-full bg-[#FFFDF9] border border-gray-200 rounded-xl px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#86CFFF]">
+          <option value="all">All Use Cases</option>
+          <option value="cs">Programming / CS</option>
+          <option value="gaming">Gaming</option>
+          <option value="casual">Casual / Office</option>
+        </select>
+      </div>
+
+      <div>
+        <label class="block text-xs font-semibold text-[#777777] mb-1">RAM</label>
+        <select id="filterRam" class="w-full bg-[#FFFDF9] border border-gray-200 rounded-xl px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#86CFFF]">
+          <option value="all">All RAM Sizes</option>
+          <option value="8GB">8GB</option>
+          <option value="16GB">16GB</option>
+          <option value="32GB">32GB</option>
+        </select>
+      </div>
+
+      <div>
+        <label class="block text-xs font-semibold text-[#777777] mb-1">Storage</label>
+        <select id="filterStorage" class="w-full bg-[#FFFDF9] border border-gray-200 rounded-xl px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#86CFFF]">
+          <option value="all">All Storage</option>
+          <option value="256GB SSD">256GB SSD</option>
+          <option value="512GB SSD">512GB SSD</option>
+          <option value="1TB SSD">1TB SSD</option>
+          <option value="2TB SSD">2TB SSD</option>
+        </select>
+      </div>
+
+      <div class="flex space-x-2">
+        <div class="flex-grow">
+          <label class="block text-xs font-semibold text-[#777777] mb-1">GPU</label>
+          <select id="filterGpu" class="w-full bg-[#FFFDF9] border border-gray-200 rounded-xl px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#86CFFF]">
+            <option value="all">All GPUs</option>
+            <option value="Integrated">Integrated</option>
+            <option value="4GB Dedicated">4GB Dedicated</option>
+            <option value="6GB Dedicated">6GB Dedicated</option>
+            <option value="8GB Dedicated">8GB Dedicated</option>
+          </select>
+        </div>
+        <button id="resetFiltersBtn" class="bg-gray-100 hover:bg-gray-200 text-[#333333] px-3 py-2 rounded-xl text-sm font-semibold transition-colors self-end" title="Reset Filters">
+          Reset
+        </button>
+      </div>
+    </div>
+
+    <!-- Catalog Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6" id="catalogContainer"></div>
+  </main>
+
+  <footer class="bg-white border-t border-gray-200 py-8 text-center text-[#777777] text-sm mt-auto">
+    <p>&copy; 2026 TechMatch. All rights reserved.</p>
+  </footer>
+
+  <script src="../assets/JS/script.js"></script>
+</body>
+</html>
